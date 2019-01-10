@@ -53,9 +53,35 @@ class App extends Component {
           />
         )
       case 0 :
+        return (
+          <RecipeDetails 
+            handleIndex={this.handleIndex}
+            id={this.state.details_id}
+          />
+        )
     }
-  }
+  };
 
+  handleIndex = index => {
+    this.setState({
+      pageIndex: index
+    });
+  };
+
+  handleDetails = (index, id) => {
+    this.setState({
+      pageIndex: index,
+      details_id: id
+    });
+  };
+
+  handleChange = e => {
+    this.setState({
+      search: e.target.value
+    });
+  };
+
+  
   render() {
     return <React.Fragment>{this.displayPage()}</React.Fragment>;
   }
