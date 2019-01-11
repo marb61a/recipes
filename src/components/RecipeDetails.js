@@ -38,9 +38,33 @@ export default class RecipeDetails extends Component {
       <div className="container my-5">
         <div className="row">
           <div className="col-10 mx-auto col-md-6 my-3">
-            <button>
+            <button
+              type="button"
+              className="btn btn-warning mb-5 text-capitalize"
+              onClick={() => handleIndex(1)}
+            >
               back to recipe list
             </button>
+            <img 
+              src={image_url}
+              className="d-block w-100"
+              alt="recipe"
+            />
+          </div>
+          {/* Details */}
+          <div className="col-10 mx-auto col-md-6 my-3">
+            <h6 className="text-uppercase">{title}</h6>
+            <h6 className="text-warning text-capitalize text-slanted">
+              provide by {publisher}
+            </h6>
+            <a
+              href={publisher_url}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="btn btn-primary mt-2 text-capitalize"
+            >
+              Publisher Webpage
+            </a>
           </div>
         </div>
       </div>
