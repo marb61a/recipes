@@ -7,7 +7,9 @@ export default class RecipeDetails extends Component {
     super(props);
     this.state = {
       recipe: recipe,
-      url: ``
+      url: `https://www.food2fork.com/api/get?key=e19424175c140604f12eb5b9a72acceb=${
+        this.props.id
+      }`
     };
   };
 
@@ -65,6 +67,26 @@ export default class RecipeDetails extends Component {
             >
               Publisher Webpage
             </a>
+            <a
+              href={source_url}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="btn btn-success mt-2 mx-3 text-capitalize"
+            >
+              recipe url
+            </a>
+            <ul className="list-group mt-4">
+              <h2 className="mt-3 mb-4">Ingredients</h2>
+              {
+                ingredients.map((item, index) => {
+                  return (
+                    <li key={index} className="list-group-item text-slanted">
+                      {item}
+                    </li>
+                  );
+                })
+              }
+            </ul>
           </div>
         </div>
       </div>

@@ -13,8 +13,8 @@ class App extends Component {
 
   state = {
     recipes: recipes,
-    base_url: "",
-    url: "",
+    base_url: "https://www.food2fork.com/api/search?key=e19424175c140604f12eb5b9a72acceb",
+    url: "https://www.food2fork.com/api/search?key=e19424175c140604f12eb5b9a72acceb",
     pageIndex: 1,
     details_id: 35382,
     search: "",
